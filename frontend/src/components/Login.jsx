@@ -4,7 +4,10 @@ import { Eye, EyeOff, Lock, Mail, User } from "lucide-react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const Login = ({ onLogin, API_URL = "https://track-wise-backend.onrender.com" }) => {
+const Login = ({
+  onLogin,
+  API_URL = "https://track-wise-backend.onrender.com",
+}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -188,7 +191,6 @@ const Login = ({ onLogin, API_URL = "https://track-wise-backend.onrender.com" })
                 checked={rememberMe}
                 onChange={(e) => setRememberMe(e.target.checked)}
                 className={loginStyles.checkbox}
-                required
               />
               <label htmlFor="remember" className={loginStyles.checkboxLabel}>
                 Remember Me
